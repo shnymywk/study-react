@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import {Links} from "@/components/Links"
-import {Headline} from "@/components/Headline"
+import { Links } from "@/components/Links"
+import { Headline } from "@/components/Headline"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
