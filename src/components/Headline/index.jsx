@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { Main } from "@/components/Main"
-import { Header } from "@/components/Header";
+import styles from "@/components/Headline/Headline.module.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,11 +11,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Home() {
+export function Headline(props) {
+
   return (
-    <>
-    <Header />
-    <Main title="Index"/>
-    </>
+        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+          {props.children}
+        </div>
   );
 }

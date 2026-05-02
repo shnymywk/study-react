@@ -3,5 +3,6 @@
         "logomark",
         "noopener",
         "noreferrer"
-    ]
+    ],
+    "js/ts.preferences.importModuleSpecifier": "non-relative"
 }
