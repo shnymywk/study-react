@@ -7,10 +7,11 @@ import { useEffect } from "react";
 
 export function Main(props) {
   useEffect(() => {
-      document.body.style.backgroundColor = "lightblue";
-      return (() => {
-        document.body.style.backgroundColor = "white";
-      });
+      document.body.style.backgroundColor = props.bgColor;
+      return () => {
+        console.log("cleanup!");
+        document.body.style.backgroundColor = "";
+      };
     },[]);
 
   return (

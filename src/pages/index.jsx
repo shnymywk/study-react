@@ -43,7 +43,7 @@ export default function Home() {
       onClick={handleClick}>
       ボタン
     </a> */}
-    <Main title="Index"/>
+    <Main title="Index" bgColor="lightblue"/>
     </>
   );
 }

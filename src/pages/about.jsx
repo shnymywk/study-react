@@ -16,7 +16,7 @@ export default function About() {
   return (
     <>
     <Header />
-    <Main title="About"/>
+    <Main title="About" bgColor=""/>
     </>
   );
 }
