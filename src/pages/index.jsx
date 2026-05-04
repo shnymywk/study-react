@@ -28,13 +28,6 @@ export default function Home() {
     setIsShow((isShow) => !isShow);
   },[])
 
-  useEffect(() => {
-    document.body.style.backgroundColor = "lightblue";
-      return (() => {
-    document.body.style.backgroundColor = "";
-    });
-  },[]);
-
   const handleChange = useCallback((e) => {
     if (e.target.value.length > 5){
       alert("5文字以内にしてください")
@@ -48,9 +41,7 @@ export default function Home() {
     <Header />
     {isShow ? <h1>{count}</h1> : null}
     <button onClick={handleClick}>ボタン</button>
-    <button 
-      onClick={handleDisplay}
-    >
+    <button onClick={handleDisplay}>
     {isShow ? "非表示" : "表示"}
     </button>
     <input 
