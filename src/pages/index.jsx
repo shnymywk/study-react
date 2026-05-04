@@ -13,21 +13,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// const handleClick = (e)  => {
-//   console.log(e.target.href);
-//   e.preventDefault();
-//   alert(foo);
-// };
-
 export default function Home() {
-  const [foo,setFoo] = useState(1)
-  // let foo = 1;
+  const [count,setCount] = useState(1)
   
-  const handleClick = (e) => {
-    setFoo((foo) => foo + 1);
-    // foo = foo + 1;
-    // console.log(foo);
-}; 
+  const handleClick = useCallback(() => {
+    if (count < 10){
+    setCount((count) => count + 1);
+    }
+  },[count]); 
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
@@ -36,12 +29,10 @@ export default function Home() {
     });
   },[]);
 
-  console.log(foo);
-
   return (
     <>
     <Header />
-    <h1>{foo}</h1>
+    <h1>{count}</h1>
     <button onClick={handleClick}>ボタン</button>
     <Main title="Index" bgColor="lightblue"/>
     </>
