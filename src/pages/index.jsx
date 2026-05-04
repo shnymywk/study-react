@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Main } from "@/components/Main";
 import { Header } from "@/components/Header";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,29 +20,29 @@ const geistMono = Geist_Mono({
 // };
 
 export default function Home() {
-//   const foo = 1;
+  const [foo,setFoo] = useState(1)
+  // let foo = 1;
   
-//   const handleClick = useCallback ((e) => {
-//   console.log(e.target.href);
-//   e.preventDefault();
-//   alert(foo);
-// },[]); 
+  const handleClick = (e) => {
+    setFoo((foo) => foo + 1);
+    // foo = foo + 1;
+    // console.log(foo);
+}; 
 
-  // useEffect(() => {
-  //   document.body.style.backgroundColor = "lightblue";
-  //   return (() => {
-  //     document.body.style.backgroundColor = "";
-  //   });
-  // },[]);
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightblue";
+    return (() => {
+      document.body.style.backgroundColor = "";
+    });
+  },[]);
+
+  console.log(foo);
 
   return (
     <>
     <Header />
-    {/* <a
-      href="/about"
-      onClick={handleClick}>
-      ボタン
-    </a> */}
+    <h1>{foo}</h1>
+    <button onClick={handleClick}>ボタン</button>
     <Main title="Index" bgColor="lightblue"/>
     </>
   );
