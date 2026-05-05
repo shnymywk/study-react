@@ -3,7 +3,7 @@ import { Links } from "@/components/Links/index";
 import { Headline } from "@/components/Headline/index";
 import { useEffect } from "react";
 
-export function Main(props) {
+export const Main = (props) => {
   useEffect(() => {
       document.body.style.backgroundColor = props.bgColor;
       return () => {

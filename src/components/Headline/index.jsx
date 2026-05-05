@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export function Headline(props) {
+export const Headline = (props) => {
 
   return (
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">

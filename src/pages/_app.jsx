@@ -2,13 +2,13 @@ import "@/styles/globals.css";
 import { useCounter } from "@/components/hooks/useCounter";
 import { useInputArray } from "@/components/hooks/useInputArray";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   const counter = useCounter();
   const inputArray = useInputArray();
   
   return (
   <>
-    <Component {...pageProps}{...counter}{...inputArray} />
+      <Component {...pageProps}{...counter}{...inputArray} />
   </>
   );
 }
