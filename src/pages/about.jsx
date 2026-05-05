@@ -27,7 +27,7 @@ export default function About(props) {
         return <li key={item}>{item}</li>;
       })}
     </ul>
-    <Main title="About" bgColor=""/>
+    <Main title="About" bgColor="beige"/>
     </>
   );
 }
