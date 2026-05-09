@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/components/Headline/Headline.module.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +13,7 @@ const geistMono = Geist_Mono({
 export const Headline = (props) => {
 
   return (
+        // props.childrenはHeadlineコンポーネントのタグで囲まれた内容全てを指す
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           {props.children}
         </div>
